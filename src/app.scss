@@ -1,0 +1,118 @@
+.parent {
+  .child {
+    background-color: aqua;
+    color: red;
+  }
+}
+
+.search-menu {
+  .ant-select {
+    .ant-select-selector {
+      background-color: #142233;
+      border-radius: 2px;
+      border: none;
+      padding: 0;
+      background-color: #142233;
+      border-radius: 2px;
+      border: none;
+      padding: 0;
+      width: 90%;
+      margin: auto;
+      // position: relative;
+      // z-index: 9999;
+      & input {
+        color: #4d5360 !important;
+        padding-left: 28px !important;
+      }
+      .ant-select-selection-placeholder {
+        padding-left: 20px;
+        color: #4d5360;
+      }
+      // &::before {
+      //   font-family: "Font Awesome 5 Free";
+      //   font-weight: 900;
+      //   content: "\f007";
+      // }
+      .ant-select-selection-item {
+        color: #4d5360;
+      }
+    }
+  }
+}
+
+.custom-select-dropdown {
+  inset: 147px 351px !important;
+  border-radius: 0px;
+  padding: 8px 18px;
+  // width: 248px !important;
+
+  .ant-select-tree {
+    // height: 100vh;
+    background-color: #0c1726;
+    color: #505769 !important;
+    .ant-select-tree-list {
+      .ant-select-tree-list-scrollbar {
+        display: none !important;
+      }
+      .ant-select-tree-list-holder {
+        .ant-select-tree-list-holder-inner {
+          transform: none !important;
+          .ant-select-tree-treenode {
+            // padding-bottom: 32px;
+            display: flex;
+            flex-direction: row-reverse;
+            .ant-select-tree-indent {
+              display: none;
+            }
+            .ant-select-tree-switcher {
+              line-height: 0;
+              margin-bottom: 0px;
+              align-self: center;
+              // background-color: red;
+              //display: none;
+            }
+            .ant-select-tree-node-content-wrapper {
+              display: flex;
+              align-items: center !important;
+
+              border-radius: 0px !important;
+              padding: 8px;
+              .ant-select-tree-iconEle {
+                line-height: 0;
+                margin-top: 3px;
+                display: flex;
+                align-items: center;
+              }
+              &.ant-select-tree-node-selected {
+                background-color: #0f1e34 !important;
+              }
+            }
+            &.ant-select-tree-treenode-selected {
+              background-color: #0f1e34 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(120, 120, 182);
+  //border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
