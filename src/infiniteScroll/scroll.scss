@@ -1,0 +1,110 @@
+// * {
+//   margin: 0;
+//   padding: 0;
+// }
+
+#container {
+  /* width: 1000px; */
+  overflow: hidden;
+  margin: 50px auto;
+  background: white;
+  display: flex;
+  gap: 20px;
+}
+
+/*photobanner*/
+
+.photobanner {
+  height: 233px;
+  width: 3550px;
+  margin-bottom: 80px;
+  display: flex;
+}
+
+.first {
+  -webkit-animation: bannermove 30s linear infinite;
+  -moz-animation: bannermove 30s linear infinite;
+  -ms-animation: bannermove 30s linear infinite;
+  -o-animation: bannermove 30s linear infinite;
+  animation: bannermove 40s linear infinite;
+}
+
+.paused {
+  animation-play-state: paused;
+}
+@keyframes bannermove {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -2125px;
+  }
+}
+
+@-moz-keyframes bannermove {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -2125px;
+  }
+}
+
+@-webkit-keyframes bannermove {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -2125px;
+  }
+}
+
+@-ms-keyframes bannermove {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -2125px;
+  }
+}
+
+@-o-keyframes bannermove {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: -2125px;
+  }
+}
+
+.photobanner {
+  height: 233px;
+  /* width: 3550px; */
+  margin-bottom: 80px;
+}
+
+.photobanner .img {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 20px;
+  height: fit-content;
+  &.active {
+    // transform: scale(1.1);
+    background-color: red !important;
+  }
+}
+
+.photobanner .img:hover {
+  transform: scale(1.1);
+  background-color: red;
+  border: 2px solid red;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}

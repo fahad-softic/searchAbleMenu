@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { IoIosArrowDown, IoIosHelpCircleOutline } from "react-icons/io";
 import { IoSearchOutline } from "react-icons/io5";
 import { MdDashboard } from "react-icons/md";
-
+import "../app.scss";
 import {
   Admin,
   Authorization,
@@ -33,54 +33,19 @@ const treeData = [
 
     children: [
       {
-        key: "user",
-        value: "user",
-        title: "User",
-
-        children: [
-          {
-            key: "Identification",
-            value: "Identification",
-            title: "Identification Verification",
-          },
-          {
-            key: "Users Verification",
-            value: "Users Verification",
-            title: "Users Verification",
-          },
-          {
-            key: "Something",
-            value: "Something",
-            title: "Something",
-          },
-          {
-            key: "Agents",
-            value: "Agents",
-            title: "Agents",
-            children: [
-              {
-                key: "Agent 1",
-                value: "Agent 1",
-                title: "Agent 1",
-              },
-              {
-                key: "Company Agent",
-                value: "Company Agent",
-                title: "Company Agent",
-              },
-              {
-                key: "Users List",
-                value: "Users List",
-                title: "Users List",
-              },
-              {
-                key: "android app",
-                value: "android app",
-                title: "android app",
-              },
-            ],
-          },
-        ],
+        key: "Identification",
+        value: "Identification",
+        title: "Identification Verification",
+      },
+      {
+        key: "Users Verification",
+        value: "Users Verification",
+        title: "Users Verification",
+      },
+      {
+        key: "Something",
+        value: "Something",
+        title: "Something",
       },
     ],
   },
@@ -347,15 +312,18 @@ const treeData = [
     icon: <Withdraw />,
   },
 ];
-const MenuSearch = () => {
+const AnotherSideMenu = () => {
   const [value, setValue] = useState<string>();
-  const handleChange = (newValue: string) => {
-    setValue(newValue);
+  const [expand, setExpand] = useState<any>();
+  const handleChange = (newValue: string, node: any) => {
+    setExpand(node);
   };
   console.log("value", value);
-
+  const handleClickChange = (value: any, node: any) => {
+    setExpand(node);
+  };
   return (
-    <div className="w-[250px] h-fit border !bg-[#f9fafa] search-menu">
+    <div className="w-[250px] h-fit border !bg-[#fff] search-menu">
       <div className="py-[16px]">
         <Typography.Title className="!text-[#fff] !text-[42px] font-bold leading-[50px] !m-0">
           Localbet
@@ -364,9 +332,11 @@ const MenuSearch = () => {
       <div className="tree">
         <TreeSelect
           open={true}
-          value={value}
-          // allowClear
+          value={expand}
           showSearch
+          treeExpandAction="click"
+          treeExpandedKeys={expand}
+          onChange={handleClickChange}
           popupClassName="custom-select-dropdown"
           style={{ width: "248px" }}
           dropdownStyle={{
@@ -395,4 +365,4 @@ const MenuSearch = () => {
   );
 };
 
-export default MenuSearch;
+export default AnotherSideMenu;

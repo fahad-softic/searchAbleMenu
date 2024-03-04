@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  width: 100%; /* Or desired width */
+}
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.card {
+  /* Base card styles */
+  margin: 10px; /* Adjust as needed */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.card:hover {
+  background-color: #f0f0f0; /* Hover background color */
+}
