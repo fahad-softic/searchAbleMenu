@@ -4,8 +4,12 @@ import ReactApexChart from "react-apexcharts";
 const BetPlaced = () => {
   const series = [
     {
-      name: "series1",
+      name: "Single",
       data: [31, 40, 28, 51, 42, 109, 100],
+    },
+    {
+      name: "Accumulator",
+      data: [11, 20, 18, 61, 52, 89, 90],
     },
   ];
 
@@ -13,6 +17,10 @@ const BetPlaced = () => {
     chart: {
       height: 350,
       type: "area",
+      legend: {
+        show: true,
+        position: "bottom",
+      },
       toolbar: {
         show: false,
         tools: {
@@ -20,12 +28,14 @@ const BetPlaced = () => {
         },
       },
     },
-    colors: ["#0BDD0B"],
+    colors: ["#0BDD0B", "#798df5"],
     dataLabels: {
       enabled: false,
     },
     stroke: {
       curve: "smooth",
+      width: [5, 2, 5],
+      dashArray: [0, 7, 3],
     },
     xaxis: {
       type: "datetime",
@@ -49,6 +59,8 @@ const BetPlaced = () => {
   return (
     <div className="bg-[#fff] p-4 rounded-lg mb-8">
       <div id="chart">
+        <h1>BetPlaced</h1>
+
         <ReactApexChart
           options={options}
           series={series}

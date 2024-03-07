@@ -26,14 +26,16 @@ const BetType = () => {
         },
       },
     },
+
     colors: colors,
     plotOptions: {
       bar: {
-        columnWidth: "50%",
+        columnWidth: "20%",
         borderRadius: 4,
         distributed: true,
         dataLabels: {
-          position: "top",
+          orientation: "vertical",
+          position: "center",
         },
       },
     },
@@ -41,7 +43,7 @@ const BetType = () => {
     dataLabels: {
       enabled: true,
       formatter: function (val) {
-        return val + "%";
+        return val + "$";
       },
       offsetY: -30,
       style: {

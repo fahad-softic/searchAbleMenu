@@ -3,7 +3,7 @@ import { DefaultOptionType } from "antd/es/select";
 import React, { useState } from "react";
 import { IoIosHelpCircleOutline } from "react-icons/io";
 import "./App.css";
-import AnotherSideMenu from "./anotherSideMenu";
+// import AnotherSideMenu from "./anotherSideMenu";
 import {
   Admin,
   Authorization,
@@ -16,6 +16,7 @@ import {
   Users,
   Withdraw,
 } from "./assets/Assets";
+import SearchMenuEx from "./SearchMenuEx";
 interface Option {
   value: string;
   label: string;
@@ -455,8 +456,13 @@ function App() {
       {/* <Test /> */}
       {/* <Experiment /> */}
       {/* <SearchTree /> */}
+      {/* <Charts /> */}
       {/* <MenuSearch /> */}
-      <AnotherSideMenu />
+      {/* <div className="flex">
+        <AnotherSideMenu /> */}
+      <SearchMenuEx />
+      {/* </div> */}
+      {/* <TestSidebar /> */}
       {/* <SidebarExercise treeData={treeData} /> */}
       {/* <CollapseEx /> */}
       {/* <SelectDeselect /> */}

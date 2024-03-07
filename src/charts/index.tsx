@@ -10,7 +10,13 @@ import Statistics from "./statistics";
 const Charts = () => {
   return (
     <div className="bg-[#eaedf7] container p-2">
-      <div className="grid grid-cols-6 gap-4">
+      <div
+        className="grid grid-cols-6 gap-4"
+        style={{
+          display: "grid",
+          gridTemplateColumns: "4fr 2fr",
+        }}
+      >
         <div className="col-span-4">
           <Statistics />
           <CurrencyDepositWithdraw />
